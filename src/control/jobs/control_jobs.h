@@ -67,6 +67,9 @@ void dt_control_time_offset_job_init(dt_job_t *job, const long int offset, long 
 int32_t dt_control_time_offset_job_run(dt_job_t *job);
 #endif
 
+void dt_control_upload_style_job_init(dt_job_t *job, long int beforeid, long int afterid, gchar *nameorig, gchar *name, gchar *username, gchar *password, gchar *description, gchar *url);
+int32_t dt_control_upload_style_job_run(dt_job_t *job);
+
 void dt_control_write_sidecar_files();
 void dt_control_delete_images();
 void dt_control_duplicate_images();
@@ -82,6 +85,8 @@ void dt_control_time_offset(const long int offset, long int imgid);
 
 void dt_control_seed_denoise();
 void dt_control_denoise();
+
+void dt_control_upload_style(long int beforeid, long int afterid, gchar *nameorig, gchar *name, gchar *username, gchar *password, gchar *description, gchar *url);
 
 struct dt_similarity_t;
 void dt_control_match_similar(struct dt_similarity_t *data);
